@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>New Post</h1>
+<h1>{{ post.title }}</h1>
 <form action="" method="POST">
 {% csrf_token %}
+<div class="container">
 {{form.as_p}}
+</div>
 <p>Are you sure ? You want to delete "{{ post.title }}"</p>
 <input type="submit" value="Confirm"/>
 </form>
